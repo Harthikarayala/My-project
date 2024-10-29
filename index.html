@@ -1,0 +1,25 @@
+# Contact-form
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <script>
+        function showThankYou(event) {
+            event.preventDefault(); // Prevents the form from submitting
+            document.getElementById("thankYouMessage").innerText = "Thank you for submitting!";
+            document.getElementById("contactForm").style.display = "none"; // Hides the form after submission
+        }
+    </script>
+</head>
+<body>
+    <h2>Contact Form</h2>
+    
+    <form id="contactForm" onsubmit="showThankYou(event)">
+        Name: <input type="text" name="name" required><br><br>
+        Contact Number: <input type="text" name="contact" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="thankYouMessage" style="color: green; font-weight: bold;"></p>
+</body>
+</html>
