@@ -11,3 +11,30 @@ Key Objectives :
 (c) Interactive Features Implement quizzes, puzzles, and gamified elements to enhance user engagement. Include discussion forums and chat features for real-time interaction and support. Provide certifications or badges for users who complete specific educational modules. 
 (d) Real-Time Updates Integrate a notification system to provide real-time updates on anti-doping regulations, news, and events. Allow users to subscribe to newsletters and alerts for the latest information.
 (e) Analytics and Feedback Incorporate analytics tools to track user engagement, progress, and learning outcomes. Collect user feedback to continuously improve the platform and its content. Expected Solution A comprehensive and accessible digital platform for anti-doping education. High levels of engagement and interaction from athletes and stakeholders. Improved understanding and adherence to anti-doping regulations. Measurable improvements in knowledge retention and application among users.
+[Uploading index (1).html…]()
+# Contact-form
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <script>
+        function showThankYou(event) {
+            event.preventDefault(); // Prevents the form from submitting
+            document.getElementById("thankYouMessage").innerText = "Thank you for submitting!";
+            document.getElementById("contactForm").style.display = "none"; // Hides the form after submission
+        }
+    </script>
+</head>
+<body>
+    <h2>Contact Form</h2>
+    
+    <form id="contactForm" onsubmit="showThankYou(event)">
+        Name: <input type="text" name="name" required><br><br>
+        Contact Number: <input type="text" name="contact" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="thankYouMessage" style="color: green; font-weight: bold;"></p>
+</body>
+</html>
+
